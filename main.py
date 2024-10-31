@@ -96,8 +96,8 @@ class MainGUI:
         self.result_password_value = ''.join(self.storage)
         self.password.set(self.result_password_value)
 
-        with open('Password.txt', 'w') as self.file:
-            self.file.write(f'{self.for_what_entry.get()} - {self.password_label.get()}')
+        with open('Password.txt', 'a') as self.file:
+            self.file.write(f'{self.for_what_entry.get()} - {self.password_label.get()}\n')
 
 
 if __name__ == '__main__':
